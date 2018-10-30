@@ -17,6 +17,7 @@ public class List {
             begin = e;
             end = e;
             e.setNext(null);
+            e.setPrev(null);
         } else {
             Element tmp = end;
             end = e;
