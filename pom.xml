@@ -24,6 +24,10 @@
         <maven.source.plugin.version>3.0.1</maven.source.plugin.version>
         <maven.javadoc.plugin.version>3.0.1</maven.javadoc.plugin.version>
         <maven.surefire.plugin.version>2.22.1</maven.surefire.plugin.version>
+        <maven.site.plugin.version>3.7.1</maven.site.plugin.version>
+        <!-- latest version of report plugin not compatible with site plugin, see https://stackoverflow.com/a/51099913 -->
+        <maven.projectinforeports.plugin.version>2.9</maven.projectinforeports.plugin.version>
+        <maven.pmd.plugin.version>3.11.0</maven.pmd.plugin.version>
         <!-- JUnit -->
         <junit.jupiter.version>LATEST</junit.jupiter.version>
         <hamcrest.junit.version>LATEST</hamcrest.junit.version>
@@ -141,4 +145,24 @@
             </plugin>
         </plugins>
     </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>${maven.site.plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>${maven.projectinforeports.plugin.version}</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>${maven.pmd.plugin.version}</version>
+            </plugin>
+        </plugins>
+    </reporting>
 </project>
