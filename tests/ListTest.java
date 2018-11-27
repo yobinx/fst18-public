@@ -1,5 +1,7 @@
 import de.unitrier.st.fst18.list.List;
+import org.junit.Ignore;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -47,6 +49,7 @@ class ListTest {
     }
 
     @Test
+    //@Disabled
     void testAppendElementFromExistingList() {
         assertEquals(0, list.getLength());
 
