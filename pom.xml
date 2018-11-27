@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <name>FST18</name>
-    <groupId>de.unitrier.st.fst18</groupId>
+    <groupId>de.unitrier.st.fst18-public</groupId>
     <artifactId>list</artifactId>
     <version>0.1</version>
     <url>https://github.com/sbaltes/fst18</url>
